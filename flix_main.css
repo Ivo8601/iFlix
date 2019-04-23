@@ -1,0 +1,227 @@
+/* Mian iFlix styles start below */
+@import url("https://fonts.googleapis.com/css?family=Signika+Negative");
+@import url('https://fonts.googleapis.com/css?family=Neucha|Permanent+Marker');
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #141414 !important;
+}
+
+/* iFlix Top Navigaton starts */
+
+.topnav {
+  background: #333;
+  overflow: hidden;
+}
+.topnav a {
+  font-family: "Signika Negative", sans-serif;
+  font-size: 17px;
+  color: #f2f2f2;
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 0.9em 1em;
+  text-decoration: none !important;
+  transition: .3s ease-in-out;
+}
+.topnav a:hover {
+    color: #E50914;
+}
+.active {
+    background: rgb(63, 63, 63);
+}
+.topnav .icon {
+    display: none;
+}
+
+/* Main body styles start below */
+
+/* Top Header styling below */
+
+.top_header {
+  max-width: 1200px;
+  margin: auto;
+  color: #f2f2f2;
+  text-align: left;
+  padding: 2em;
+}
+#border {
+  max-width: 600px;
+  margin: 2em auto;
+  border-bottom: 1px solid rgb(39, 39, 39);
+}
+#top_head {
+  font-family: "Signika Negative", sans-serif;
+  font-size: 3rem;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.iFlix {
+  text-transform: none;
+  background: -webkit-linear-gradient(#fff4f4, #f01809, #550903);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+#top_par {
+  color: #f2f2f2;
+  font-family: "Signika Negative", sans-serif;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+/* iFlix specials styling starts */
+
+#main_contain {
+  max-width: 1700px;
+  margin: auto;
+}
+#originals {
+  color: #f2f2f2;
+  font-size: 2rem;
+  padding-left: 0 !important;
+  margin-left: 0.5em !important;
+}
+.specials_row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  max-width: 1700px;
+  flex-flow: row wrap;
+  margin: auto;
+  margin-bottom: 3em;
+  margin-top: 1em;
+}
+.specials_inner {
+ flex: auto;
+ width: 120px;
+ margin: 0.8vw;
+ overflow: hidden;
+ position: relative;
+ transition: .3s ease-in-out;
+ cursor: pointer;
+}
+.specials_inner img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.specials_inner:hover {
+  transform: scale(1.1);
+}
+.cover_text {
+  color: #f2f2f2;
+  position: absolute;
+  top: 85%;
+  left: 2%;
+  font-size: 1.3vw;
+  font-family: "Signika Negative", sans-serif;
+  visibility: hidden;
+  opacity: 0;
+  transition: 1.5s ease-out;
+  text-shadow: 5px 5px 20px black;
+}
+.specials_inner:hover .cover_text {
+  visibility: visible;
+  opacity: 1;
+}
+.specials_title {
+  font-size: 1.5vw;
+  font-weight: 700;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  text-transform: uppercase;
+  text-shadow: 5px 5px 15px #000000;
+}
+/* iFlix specials styling ends */
+
+/* Movie preview starts */
+
+#preview_contain {
+  max-width: 1700px;
+  margin: auto;
+  color: #f2f2f2;
+  font-size: 22px;
+  font-family: "Signika Negative", sans-serif;
+  margin-bottom: 2em;
+}
+#preview_inner {
+  max-width: 1700px;
+  margin: auto;
+}
+.main_btn {
+  display: inline-block;
+  text-decoration: none !important;
+  color: black;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 0.5em 2em;
+  margin: 0.3vw;
+  border: 1px solid #f2f2f2;
+  background: white;
+  border-radius: 3px;
+  transition: .3s all;
+}
+.main_btn:hover {
+  background: transparent;
+  color: #f2f2f2;
+  border: 1px solid #f2f2f2;
+}
+/* Movie preview ends */
+
+@media screen and (max-width: 1659px){
+  #preview_contain {
+    padding: 0em 2em;
+  }
+}
+@media screen and (min-width: 1600px){
+  #originals {
+    margin-left: 64px;
+  }
+}
+@media screen and (max-width: 1599px){
+  #originals {
+    margin-left: 34px;
+  }
+}
+@media screen and (max-width: 681px){
+  .specials_title {
+    font-size: 4vw;
+  }
+  .cover_text {
+    display: none;
+  }
+  .main_btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+    #border {
+     max-width: 300px;
+  }
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
